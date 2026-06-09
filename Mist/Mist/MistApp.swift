@@ -5,10 +5,13 @@
 
 import SwiftUI
 import DynamicNotchKit
+import Battery
 
 @main
 struct MistApp: App {
     @State private var hovered = false
+    @State private var enlarged = false
+    @State var status: Bool = false
 
     var body: some Scene {
         WindowGroup {
@@ -17,23 +20,28 @@ struct MistApp: App {
                     let notch = DynamicNotch(
                         style: .auto,
                         expanded: {
-                            NotchView(hovered: $hovered)
+                            NotchView(hovered: $hovered, enlarged: $enlarged, status: $status)
                         },
                         compactLeading: {},
                         compactTrailing: {}
                     )
                     
                     Task {
+                        try? await Task.sleep(for: .seconds(0.8))
                         await notch.expand()
                     }
-                    Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
+                    Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { _ in
                         Task { @MainActor in
                             let hovering = notch.isHovering
-                            withAnimation(.snappy(duration: 0.5)) {
-                                hovered = hovering
+                            if hovered != hovering {
+                                withAnimation(.snappy(duration: 0.5)) {
+                                    hovered = hovering
+                                }
                             }
                         }
                     }
+                    
+                    
             }
         }
         Settings {

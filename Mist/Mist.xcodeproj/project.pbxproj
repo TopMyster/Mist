@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		136984992FD673C800DAD597 /* DynamicNotchKit in Frameworks */ = {isa = PBXBuildFile; productRef = 136984982FD673C800DAD597 /* DynamicNotchKit */; };
+		13FAA3942FD7724300D14DBE /* Battery in Frameworks */ = {isa = PBXBuildFile; productRef = 13FAA3932FD7724300D14DBE /* Battery */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13FAA3942FD7724300D14DBE /* Battery in Frameworks */,
 				136984992FD673C800DAD597 /* DynamicNotchKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +73,7 @@
 			name = Mist;
 			packageProductDependencies = (
 				136984982FD673C800DAD597 /* DynamicNotchKit */,
+				13FAA3932FD7724300D14DBE /* Battery */,
 			);
 			productName = Mist;
 			productReference = 136984892FD672C000DAD597 /* Mist.app */;
@@ -84,7 +87,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2650;
-				LastUpgradeCheck = 2650;
+				LastUpgradeCheck = 2700;
 				TargetAttributes = {
 					136984882FD672C000DAD597 = {
 						CreatedOnToolsVersion = 26.5;
@@ -102,6 +105,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				136984972FD673C800DAD597 /* XCRemoteSwiftPackageReference "DynamicNotchKit" */,
+				13FAA3922FD7724300D14DBE /* XCRemoteSwiftPackageReference "Battery" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1369848A2FD672C000DAD597 /* Products */;
@@ -168,6 +172,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 9B2DSTXCSD;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -193,6 +198,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -232,6 +238,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 9B2DSTXCSD;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -250,6 +257,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
@@ -262,6 +270,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 9B2DSTXCSD;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -294,6 +303,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 9B2DSTXCSD;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -350,6 +360,14 @@
 				minimumVersion = 1.1.0;
 			};
 		};
+		13FAA3922FD7724300D14DBE /* XCRemoteSwiftPackageReference "Battery" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pmanot/Battery";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -357,6 +375,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 136984972FD673C800DAD597 /* XCRemoteSwiftPackageReference "DynamicNotchKit" */;
 			productName = DynamicNotchKit;
+		};
+		13FAA3932FD7724300D14DBE /* Battery */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13FAA3922FD7724300D14DBE /* XCRemoteSwiftPackageReference "Battery" */;
+			productName = Battery;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -1,6 +1,15 @@
 {
-  "originHash" : "ceb16fcb08445d48b91e3c0e80a4d69e6d6356c630413021f4ba7f80b8160d53",
+  "originHash" : "9632ad9e3d1fb2fcc9940b25b60ba570ce7a18f90dba3ed54fef43b5c3a2d856",
   "pins" : [
+    {
+      "identity" : "battery",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pmanot/Battery",
+      "state" : {
+        "branch" : "main",
+        "revision" : "4e1ae490a9b36c3187657b5bdd727525f1c4de54"
+      }
+    },
     {
       "identity" : "dynamicnotchkit",
       "kind" : "remoteSourceControl",
