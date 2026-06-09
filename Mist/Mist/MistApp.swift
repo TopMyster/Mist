@@ -16,7 +16,9 @@ struct MistApp: App {
     var body: some Scene {
         WindowGroup {
             EmptyView()
+                .frame(width: 0, height: 0)
                 .onAppear {
+                    NSApplication.shared.hide(nil)
                     let notch = DynamicNotch(
                         style: .auto,
                         expanded: {
