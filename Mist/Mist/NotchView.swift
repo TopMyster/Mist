@@ -27,7 +27,7 @@ struct NotchView: View {
             if hovered {
                 if enlarged {
                     //Enlarged Elements
-                    EnlargedView()
+                    EnlargedView(percent: $percent)
                         .padding(.vertical, 20)
                         .padding(.horizontal, 70)
                 } else {
