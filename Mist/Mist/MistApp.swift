@@ -36,7 +36,7 @@ struct MistApp: App {
                         Task { @MainActor in
                             let hovering = notch.isHovering
                             if hovered != hovering {
-                                withAnimation(.snappy(duration: 0.5)) {
+                                withAnimation(.bouncy(duration: 0.5)) {
                                     hovered = hovering
                                 }
                             }

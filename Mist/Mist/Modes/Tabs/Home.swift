@@ -1,13 +1,13 @@
 //
-//  EnlargedView.swift
+//  Home.swift
 //  Mist
 //
-//  Created by Toope Oladunjoye on 6/8/26.
+//  Created by Toope Oladunjoye on 6/29/26.
 //
 
 import SwiftUI
 
-struct EnlargedView: View {
+struct HomeView: View {
     @Binding var percent: Double
     var body: some View {
         let iconName: String = {
@@ -40,4 +40,3 @@ struct EnlargedView: View {
         }
     }
 }
-

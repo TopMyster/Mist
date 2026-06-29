@@ -14,9 +14,9 @@ struct NotchView: View {
     @Binding var status: Bool
     @State var percent: Double = -1.0
     @State var batteryAlert: Bool = false
- 
-    
+    @State var tab: Int = 1
     @StateObject private var battery = Battery()
+    
     var body: some View {
         Group {
             StatusView(percent: $percent, batteryAlert: $batteryAlert)
@@ -27,7 +27,7 @@ struct NotchView: View {
             if hovered {
                 if enlarged {
                     //Enlarged Elements
-                    EnlargedView(percent: $percent)
+                    EnlargedView(percent: $percent, tab: $tab)
                         .padding(.vertical, 20)
                         .padding(.horizontal, 70)
                 } else {
@@ -47,20 +47,32 @@ struct NotchView: View {
             }
         }
         .onTapGesture {
-            withAnimation(.snappy(duration: 0.5)) {
+            withAnimation(.bouncy(duration: 0.5)) {
                 enlarged.toggle()
             }
         }
+        .gesture(
+            DragGesture(minimumDistance: 15, coordinateSpace: .local)
+                .onEnded { value in
+                    withAnimation(.snappy(duration: 0.5)) {
+                        if value.translation.width > 0 {
+                            tab = max(1, tab - 1)
+                        } else if value.translation.width < 0 {
+                            tab = min(2, tab + 1)
+                        }
+                    }
+                }
+        )
     }
     
     func triggerBatteryAlert() {
         Task {
-            withAnimation(.snappy(duration: 0.5)) {
+            withAnimation(.bouncy(duration: 0.5)) {
                 status = true
                 batteryAlert = true
             }
                 try? await Task.sleep(for: .seconds(3))
-            withAnimation(.snappy(duration: 0.5)) {
+            withAnimation(.bouncy(duration: 0.5)) {
                 status = false
                 batteryAlert = false
             }
