@@ -3,6 +3,8 @@ A Native Dynamic Island for macOS at No Cost
 
 Mist brings the iconic Dynamic Island experience to your Mac, displaying real-time system information directly in your menu bar.
 
+https://github.com/user-attachments/assets/6007ac6b-e446-40ce-b679-019413de626d
+
 ## Features
 
 - **Dynamic Notch Display**: A sleek notch at the top of your screen that mimics the iPhone's Dynamic Island
