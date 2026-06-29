@@ -54,7 +54,7 @@ struct NotchView: View {
         .gesture(
             DragGesture(minimumDistance: 15, coordinateSpace: .local)
                 .onEnded { value in
-                    withAnimation(.snappy(duration: 0.5)) {
+                    withAnimation(.smooth(duration: 0.5)) {
                         if value.translation.width > 0 {
                             tab = max(1, tab - 1)
                         } else if value.translation.width < 0 {
