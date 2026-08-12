@@ -17,10 +17,13 @@ struct EnlargedView: View {
                 HomeView(percent: $percent)
             case 2:
                 Clipboard()
+            case 3:
+                Music()
             default:
                 HomeView(percent: $percent)
             }
         }
     }
+    
 }
 
