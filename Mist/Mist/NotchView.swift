@@ -58,7 +58,7 @@ struct NotchView: View {
                         if value.translation.width > 0 {
                             tab = max(1, tab - 1)
                         } else if value.translation.width < 0 {
-                            tab = min(2, tab + 1)
+                            tab = min(3, tab + 1)
                         }
                     }
                 }
