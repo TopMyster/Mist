@@ -3,7 +3,7 @@ A Native Dynamic Island for macOS at No Cost
 
 Mist brings the iconic Dynamic Island experience to your Mac, displaying real-time system information directly in your menu bar.
 
-https://github.com/user-attachments/assets/6007ac6b-e446-40ce-b679-019413de626d
+https://github.com/user-attachments/assets/af22dada-090b-4b69-a420-8a248e1cc90b
 
 ## Features
 
